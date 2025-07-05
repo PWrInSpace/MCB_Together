@@ -1,0 +1,19 @@
+menu "PinOut"
+    
+    config SCL_COM
+        int "I2C num 1 (communication) scl pin"
+        default 4
+
+    config SDA_COM
+        int "I2C num 1 (communication) sda pin"
+        default 5
+
+    config SCL_S
+        int "I2C num 2 (sensors) scl pin"
+        default 36
+
+    config SDA_S
+        int "I2C num 2 (sensors) sda pin"
+        default 35
+
+endmenu
