@@ -16,4 +16,28 @@ menu "PinOut"
         int "I2C num 2 (sensors) sda pin"
         default 35
 
+    config SPI_MEM_MOSI
+        int "Spi memory mosi pin"
+        default 12
+
+    config SPI_MEM_MISO
+        int "Spi memory miso pin"
+        default 10
+
+    config SPI_MEM_SCK
+        int "Spi memory sck pin"
+        default 11
+
+    config SPI_COM_MOSI
+        int "Spi communication mosi pin"
+        default 14
+
+    config SPI_COM_MISO
+        int "Spi communication miso pin"
+        default 21
+
+    config SPI_COM_SCK
+        int "Spi communication sck pin"
+        default 47
+        
 endmenu
