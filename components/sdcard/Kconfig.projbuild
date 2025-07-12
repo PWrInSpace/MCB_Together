@@ -1,0 +1,54 @@
+menu "SD Task"
+
+    config SD_DATA_BUFFER_MAX_SIZE
+        int "data buffer size"
+        default 512
+
+    config SD_LOG_BUFFER_MAX_SIZE
+        int "log buffer size"
+        default 256
+
+    config SD_MOUNT_POINT
+        string "mount_point"
+        default "/sdcard"
+
+    config SD_DATA_QUEUE_SIZE
+        int "Data queue size"
+        default 20
+
+    config SD_LOG_QUEUE_SIZE
+        int "Log queue size"
+        default 20
+
+    config SD_PATH_SIZE
+        int "Path size"
+        default 40
+
+    config SD_DATA_DROP_VALUE
+        int "Data drop value"
+        range 0 SD_DATA_QUEUE_SIZE
+        default 10
+
+    config SD_TASK_STACK_DEPTH
+        int "task stack depth"
+        default 8100
+
+    config SD_TASK_PRIORITY
+        int "task priority"
+        range 0 20
+        default 5
+
+    config SD_TASK_CORE_ID
+        int "task core id"
+        range 0 1
+        default 1
+
+    config SD_TASK_TRY_TO_MOUNT_DELAY
+        int "Try to mount delay in ticks"
+        default 1000
+
+    config SD_MAX_DATA_RECEIVE
+        int "Max data drop during one loop execution"
+        default 25
+
+endmenu
